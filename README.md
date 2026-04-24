@@ -1,4 +1,6 @@
 # smartseason
+Live App	https://smartseason-hq29spgit-sheilawuors-projects.vercel.app
+Backend API	https://smartseason-backend-4325.onrender.com
 
 # SmartSeason Field Monitoring System
 
