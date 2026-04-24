@@ -1,6 +1,7 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
 import Login from './pages/Login';
 import AdminDashboard from './pages/AdminDashboard';
+import AgentDashboard from './pages/AgentDashboard';
 import ProtectedRoute from './components/ProtectedRoute';
 
 function App() {
@@ -10,6 +11,11 @@ function App() {
       <Route path="/admin/dashboard" element={
         <ProtectedRoute role="ADMIN">
           <AdminDashboard />
+        </ProtectedRoute>
+      } />
+      <Route path="/agent/dashboard" element={
+        <ProtectedRoute role="AGENT">
+          <AgentDashboard />
         </ProtectedRoute>
       } />
       <Route path="/" element={<Navigate to="/login" />} />
