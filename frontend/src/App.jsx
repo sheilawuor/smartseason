@@ -1,5 +1,14 @@
-export default function App() {
+import { Routes, Route, Navigate } from 'react-router-dom';
+import Login from './pages/Login';
+import ProtectedRoute from './components/ProtectedRoute';
+
+function App() {
   return (
-    <h1 className="text-3xl font-bold text-green-600">SmartSeason works!</h1>
-  )
+    <Routes>
+      <Route path="/login" element={<Login />} />
+      <Route path="/" element={<Navigate to="/login" />} />
+    </Routes>
+  );
 }
+
+export default App;
